@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <div class="wrapper">
+
+        <nav id="sidebar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+                <h3>keen</h3>
+            </div>
+            <!-- Sidebar Links -->
+            <ul class="list-unstyled components">
+                <li class="dropright">
+                    <a href="#downloadSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="far fa-chart-bar"></i> Dashboards</a>
+                    <ul class="collapse list-unstyled" id="downloadSubmenu">
+                        <li><a href="#">Navy Aside</a></li>
+                        <li><a href="#">Brand Aside</a></li>
+                        <li><a href="#">Navy Header</a></li>
+                        <li><a href="#">Light Aside</a></li>
+                        <li><a href="#">Brand Header</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-cog"></i> Layout Builder</a></li>
+
+                <div  class="componentsdiv"><i class="fa fa-book"></i> Components </div>
+
+                <li class="dropright">
+                    <a href="#baseSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-layer-group"></i> Base</a>
+                    <ul class="collapse list-unstyled" id="baseSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#customSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-plane-departure"></i> Cutom</a>
+                    <ul class="collapse list-unstyled" id="customSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#extendedSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-angle-double-right"></i> Extended</a>
+                    <ul class="collapse list-unstyled" id="extendedSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-chart-pie"></i> Widgets</a></li>
+                <li class="dropright">
+                    <a href="#formsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-wpforms"></i> Forms</a>
+                    <ul class="collapse list-unstyled" id="formsSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#wizardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-laptop"></i> Keen Wizard</a>
+                    <ul class="collapse list-unstyled" id="wizardSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#datatablesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-table"></i> Keen Datatable</a>
+                    <ul class="collapse list-unstyled" id="datatablesSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#dataTablesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-table"></i> DataTables</a>
+                    <ul class="collapse list-unstyled" id="dataTablesSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#iconsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-hockey-puck"></i> Icons</a>
+                    <ul class="collapse list-unstyled" id="iconsSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#partletsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="far fa-clone"></i> Partlets</a>
+                    <ul class="collapse list-unstyled" id="partletsSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#calenderSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="far fa-calendar-alt"></i> Calender</a>
+                    <ul class="collapse list-unstyled" id="calenderSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#chartsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-chart-line"></i> Charts</a>
+                    <ul class="collapse list-unstyled" id="chartsSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <div  class="componentsdiv"><i class="fa fa-gavel"></i> Custom </div>    
+               
+                <li class="dropright">
+                    <a href="#blogSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-blogger"></i> Blog</a>
+                    <ul class="collapse list-unstyled" id="blogSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#pricingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-money-check-alt"></i> Pricing</a>
+                    <ul class="collapse list-unstyled" id="pricingSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#invoicesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-bell"></i> Invoices</a>
+                    <ul class="collapse list-unstyled" id="invoicesSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#faqsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-info-circle"></i> FAQs</a>
+                    <ul class="collapse list-unstyled" id="faqsSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+                <li class="dropright">
+                    <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-id-badge"></i> User  Pages</a>
+                    <ul class="collapse list-unstyled" id="userSubmenu">
+                        <li><a href="#">Demo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>    
+
+        <div id="container" style="width:100%; height:400px;"></div>
+
+
+</body>
+</html>
