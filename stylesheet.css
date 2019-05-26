@@ -13,7 +13,7 @@
 #sidebarCollapse span {
   width: 80%;
   height: 2px;
-  margin: 0 auto;
+  margin: 0;
   display: block;
   background: white;
   transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
@@ -48,9 +48,9 @@
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  height: 100vh;
   background: #555;
   color: #fff;
+  height: 100vh;
   transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
   transform-origin: center left; /* Set the transformed position of sidebar to center left side. */
 }
@@ -166,4 +166,144 @@ ul ul a {
 .componentsdiv {
   color: #999;
   font-weight: bold;
+}
+
+.flex-contain{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    
+}
+.item{
+    background-color: #fff;
+    color: black;
+    padding: 1.25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    margin-left: 2rem;
+    border-radius: 0.75rem;
+    min-width: 30%;
+    flex: 1 1 auto;
+
+}
+
+.last {
+  background-color: #fff;
+  color: black;
+  padding: 1.25rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  margin-left: 2rem;
+  border-radius: 0.75rem;
+  min-width: 30%;
+  flex: 1 1 auto;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+  .item {
+    height: 50vh;
+  }
+  .charts {
+    height: 40vh;
+  }
+  .bulletchart {
+    height: 10vh;
+  }
+  .last {
+    height: 20%;
+  }
+  .bulletcharts{
+    height: 10vh;
+  }
+  .statchart {
+    height: 20%
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .item {
+    height: 50vh;
+  }
+  .charts {
+    height: 35vh;
+  }
+  .bulletchart {
+    height: 10vh;
+  }
+  .last {
+    height: 40%;
+  }
+  .bulletcharts{
+    height: 10vh;
+  }
+  .statchart {
+    height: 80vh
+  }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .item {
+    height: 45vh;
+  }
+  .charts {
+    height: 30vh;
+  }
+  .bulletchart {
+    height: 10vh;
+  }
+  .last {
+    height: 100vh;
+  }
+  .bulletcharts{
+    height: 10vh;
+  }
+  .statchart {
+    height: 80vh
+  }
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .item {
+    height: 40vh;
+  }
+  .charts {
+    height: 23vh;
+  }
+  .bulletchart {
+    height: 10vh;
+  }
+  .last {
+    height: 40%;
+  }
+  .bulletcharts {
+    height: 10vh
+  }
+  .statchart {
+    height: 80vh
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .item {
+    height: 35vh;
+  }
+  .charts {
+    height: 27vh;
+  }
+  .bulletchart {
+    height: 9vh;
+  }
+  .last {
+    height:100vh;
+  }
+  .bulletcharts {
+    height: 8vh
+  }
+  .statchart {
+    height:80vh 
+  }
+ 
 }

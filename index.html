@@ -39,6 +39,7 @@
     <script src="script.js"></script>
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/bullet.js"></script>
     <div class="wrapper">
 
         <nav id="sidebar">
@@ -163,18 +164,235 @@
                 </li>
             </ul>
         </nav>
+        
+    
 
-        <div id="content">
-            <button type="button" id="sidebarCollapse" class="navbar-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>    
-
-        <div id="container" style="width:100%; height:400px;"></div>
-
-
+        <div class="container">
+                
+            <div class="row">
+                <div id="togglebutton">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn btn-md">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>        
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">               
+                    <div class="row">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span><span>Menu</span>
+                    </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pages
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Demo</a>
+                            </div>
+                        </li>
+                        <span></span>
+                        <span></span>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Demo</a>
+                            </div>
+                        </li>
+                        <span></span>
+                        <span></span>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Apps
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Demo</a>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>                
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="flex-contain">
+                        <div class="item container">
+                            <div class="row">
+                                    <div class="col-8"><h6>Author Sales</h6></div>
+                                    <div class="col-2">
+                                        $64M
+                                    </div>    
+                            </div>
+                                <div class="row">    
+                                <div class="col-12 charts" id="authorsales" style="width:100%;">
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="flex-contain">
+                        <div class="item container">
+                            <div class="row">
+                                <div class="col-8"><h6>Technologies</h6></div>
+                                <div class="col-2">
+                                    9.3M
+                                </div>    
+                            </div>
+                            <div class="row">
+                            <div class="col-12 charts" id="technologies" style="width:100%;"></div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="flex-contain">
+                        <div class="item container">
+                            <div class="row">
+                                <div class="col-8"><h6>Total Orders</h6></div> 
+                                <div class="col-2">17M</div>   
+                            </div>
+                            <div class="row">
+                                <div class="col-12 charts" id="totalorders" style="width:100%;"></div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="flex-contain">
+                        <div class="item container">
+                            <div class="row">
+                                    <div class="col-8"><h6>Announcements</h6></div>   
+                                    <div class="col-2"><button type="button" class="btn btn-light btn-sm" >View</button></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 style="font-weight: bold">Incredibly Positive Reviews</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p style="font-size: small">To start a blog think of a topic about and first brainstorm party is ways to write details.</p>
+                                </div>
+                            </div>
+                            <div class="row" style="position: absolute; bottom: 15px">
+                                <div class="col">
+                                    <h5><span class="badge badge-info">17 Nov, 2018</span></h5>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="flex-contain">
+                        <div class="item container">
+                            <div class="row">
+                                <div class="col-12"><h6>Project</h6></div>    
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 style="font-weight: bold">First Milestone Achievement</h6>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-12">
+                                    <p style="font-size: small">To start a blog think of a topic about and first brainstorm party is ways to write details.</p>
+                                </div>
+                            </div>  
+                            <div class="row" style="position: relative; bottom: 0px">
+                                <div class="col-12 bulletchart" id="project" style="width: 100%;"></div> 
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="flex-contain">
+                        <div class="item container">
+                            <div class="row">
+                                <div class="col-8"><h6>Today's Schedule</h6></div>
+                                <div class="col-1"><button type="button" class="btn btn-light btn-sm"><</button></div>
+                                <div class="col-1"><button type="button" class="btn btn-light btn-sm">></button></div>    
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><h6 style="font-weight: bold">UI/UX Design Updates</h6></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-12"><h5 style="color: #1476CD">11:15AM - 12:30PM</h5></div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-5"><button type="button" class="btn btn-light btn-md">View Map</button></div>
+                            </div>
+                            <div class="row" style="position: absolute; bottom: 15px">
+                                    <div class="col-12"><span><i class="fas fa-map-marker-alt"></i>Location</span></div>
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="flex-contain">
+                        <div class="container last">
+                            <div class="row">
+                                <div class="col-12"><h6>Top Products</h6></div>
+                            </div>
+                            <div class="row" >   
+                                <div class="col-4"><button type="button" class="btn btn-light"><i class="far fa-chart-bar"></i><br>Settings<br></button></div>   
+                                <div class="col-4"><button type="button" class="btn btn-light"><i class="fas fa-layer-group"></i><br>Design<br></button></div>
+                                <div class="col-2"><button type="button" class="btn btn-light"><i class="fas fa-code"></i><br>Code<br></button></div>
+                            </div>
+                            <br>
+                                <div class="col-12"><span style="font-weight: 200; color: black; font-size: medium">HTML 5 Templates</span></div>
+                                <div class="col-12" style="color: slategrey"><span>Front-end, Admin and Email</span></div>
+                                <div class="col-12 bulletcharts" id="html" style="width: 100%;"></div> 
+                                <div class="col-12"><span style="font-weight: 200; color: black; font-size: medium">Wordpress Themes</span></div>
+                                <div class="col-12" style="color: slategrey"><span>eCommerce Website Plugin</span></div>
+                                <div class="col-12 bulletcharts" id="wordpress" style="width: 100%;"></div>
+                                <div class="col-12"><span style="font-weight: 200; color: black; font-size: medium">eCommerce Websites</span></div>
+                                <div class="col-12" style="color: slategrey"><span>Shops, fashion websites, etc</span></div>
+                                <div class="col-12 bulletcharts" id="ecommerce" style="width: 100%;"></div> 
+                                <div class="col-12"><span style="font-weight: 200; color: black; font-size: medium">UI/UX Design</span></div>
+                                <div class="col-12" style="color: slategrey"><span>Everything you ever imagined</span></div>
+                                <div class="col-12 bulletcharts" id="design" style="width: 100%;"></div>
+                                <div class="col-12"><span style="font-weight: 200; color: black; font-size: medium">Freebie Themes</span></div>
+                                <div class="col-12" style="color: slategrey"><span>Front-end & admin</span></div>
+                                <div class="col-12 bulletcharts" id="themes" style="width: 100%;"></div> 
+                            <br>
+                                     
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-sm-12 col-md-12 col-lg-8">
+                        <div class="flex-contain">
+                            <div class="last container">
+                                <div class="row">
+                                    <div class="col-8"><h6>Sales Statistics</h6></div>
+                                    <div class="col dropdown show">
+                                        <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            August
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Demo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 statchart" style="width: 100%" id="xyz"></div>
+                                </div>         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>   
+        </div>
+    </div>
 </body>
 </html>
