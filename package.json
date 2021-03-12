@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "highcharts-export-server": "^2.0.24"
+    "highcharts-export-server": "^2.1.0"
   }
 }
